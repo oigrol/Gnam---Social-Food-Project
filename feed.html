@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnam! - Feed</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dine_heart" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="bg-effect bg-effect-1"></div>
+    <div class="bg-effect bg-effect-2"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/Logo-Gnam.png" alt="Logo Gnam!" width="200"></a>
+                <div class="nav-links d-flex ms-auto gap-2 align-items-center">
+                    <a class="nav-link active" href="feed.html" aria-current="page">Feed</a>
+                    <div class="dropdown">
+                        <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Profile
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-profile">
+                            <li><a class="dropdown-item" href="profile.html"><i
+                                        class="bi bi-person-circle me-2"></i>View Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="create-post.html" class="btn btn-post mx-2"><i class="bi bi-plus-lg me-1"></i>Create post</a>
+                <div class="d-flex align-items-center gap-2 ms-2">
+                    <button type="button" aria-label="Dark mode"
+                        class="btn btn-sm btn-effect rounded-pill d-flex align-items-center gap-2 mb-0">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container py-4 pb-5">
+        <section class="filters reveal reveal-delay-1 mt-4">
+            <a href="#" class="filter-button active"><i class="bi bi-compass"></i>For You</a>
+            <a href="#" class="filter-button"><i class="bi bi-lightning-charge"></i>Trending</a>
+            <a href="#" class="filter-button"><i class="bi bi-egg-fried"></i>Quick Meals</a>
+            <a href="#" class="filter-button"><i class="bi bi-tree"></i>Veggie</a>
+            <a href="#" class="filter-button"><i class="bi bi-cake2"></i>Desserts</a>
+            <a href="#" class="filter-button"><i class="bi bi-globe-europe-africa"></i>Italian Food</a>
+        </section>
+
+        <section class="row g-4 mt-1">
+            <aside class="col-xl-3 d-none d-xl-block">
+                <div class="block-feed sidebar-sticky reveal reveal-delay-2">
+                    <h5 class="mb-3">Quick filters</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="sidebar-link active"><i class="bi bi-stars"></i> Recommended</a>
+                        <a href="#" class="sidebar-link"><i class="bi bi-stopwatch"></i> Under 20 minutes</a>
+                        <a href="#" class="sidebar-link"><i class="bi bi-heart-pulse"></i> High protein</a>
+                        <a href="#" class="sidebar-link"><i class="bi bi-cup-straw"></i> Low calories</a>
+                        <a href="#" class="sidebar-link"><i class="bi bi-people"></i> Following</a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="col-xl-6 col-lg-8">
+                <article class="block-feed reveal reveal-delay-3 mb-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="icon-circle">GL</div>
+                        <div>
+                            <strong>@giolore</strong>
+                            <p class="mb-0 text-soft small">Share your next dish with the community</p>
+                        </div>
+                    </div>
+                    <a href="create-post.html" class="block-post mb-3 d-block">What's cooking today?</a>
+                </article>
+
+                <article class="block-feed post reveal reveal-delay-4 mb-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="icon-circle dark">AC</div>
+                            <div>
+                                <strong>@Alessia.cooks</strong>
+                                <p class="mb-0 text-soft small">2h ago - Bari</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-inspire btn-sm"><i class="bi bi-three-dots"></i></button>
+                    </div>
+                    <p class="mb-2"><a href="post.html" class="feed-post-title"><strong>Focaccia barese</strong> with
+                            cherry tomatoes and oregano.</a></p>
+                    <p class="mb-3">
+                        Crispy outside, super soft inside. Ready in 45 minutes.</p>
+                    <a href="post.html"><img src="images/focaccia-barese.jpg" alt="Focaccia barese" class="post-img mb-3"></a>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="pills">#apulianfood</span>
+                        <span class="pills">#focaccialovers</span>
+                        <span class="pills">#deliciousdinner</span>
+                    </div>
+                    <div class="post-actions">
+                        <button type="button"><i
+                                class="material-symbols-outlined text-danger material-symbols-outlined-size">dine_heart</i>
+                            2.4k</button>
+                        <button type="button"><i class="bi bi-chat-dots"></i> 184</button>
+                        <button type="button"><i class="bi bi-bookmark"></i> Save</button>
+                        <a href="post.html"><i class="bi bi-box-arrow-up-right"></i> Show recipe</a>
+                    </div>
+                </article>
+
+                <article class="block-feed post reveal reveal-delay-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="icon-circle dark">JC</div>
+                            <div>
+                                <strong>@juan.chef</strong>
+                                <p class="mb-0 text-soft small">5h ago - Milan</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-inspire btn-sm"><i class="bi bi-three-dots"></i></button>
+                    </div>
+                    <p class="mb-2"><a href="post.html" class="feed-post-title">Spicy beef wrap with yogurt sauce and
+                            salad.</a></p>
+                    <p class="mb-3">Balanced macros and delicious flavor. Ready in 20 minutes.</p>
+                    <a href="post.html"><img src="images/beef-wrap.jpg" alt="Beef wrap" class="post-img mb-3"></a>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="pills">#fastfood</span>
+                        <span class="pills">#highprotein</span>
+                        <span class="pills">#foodcreator</span>
+                    </div>
+                    <div class="post-actions">
+                        <button type="button"><i
+                                class="material-symbols-outlined text-danger material-symbols-outlined-size">dine_heart</i>1.8k</button>
+                        <button type="button"><i class="bi bi-chat-dots"></i> 97</button>
+                        <button type="button"><i class="bi bi-bookmark"></i> Save</button>
+                        <a href="post.html"><i class="bi bi-box-arrow-up-right"></i> Show recipe</a>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="col-xl-3 col-lg-4">
+                <div class="block-feed reveal reveal-delay-5 mb-4">
+                    <h5 class="mb-3"><i class="bi bi-graph-up me-2"></i>Trends</h5>
+                    <div class="trend-item">
+
+                        <span><a href="#" class="hashtag">#summerfood</a></span>
+                        <small>49.2k posts</small>
+                    </div>
+                    <div class="trend-item">
+                        <span><a href="#" class="hashtag">#proteinpancake</a></span>
+                        <small>33.4k posts</small>
+                    </div>
+                    <div class="trend-item">
+                        <span><a href="#" class="hashtag">#airfryerrecipes</a></span>
+                        <small>21.7k posts</small>
+                    </div>
+                    <div class="trend-item no-border">
+                        <span><a href="#" class="hashtag">#quicksnack</a></span>
+                        <small>11.9k posts</small>
+                    </div>
+                </div>
+
+                <div class="block-feed reveal reveal-delay-5">
+                    <h5 class="mb-3"><i class="bi bi-people me-2"></i>Top creators</h5>
+                    <div class="creator-item">
+                        <div class="icon-circle sm">MF</div>
+                        <div>
+                            <strong>@micheal.food</strong>
+                            <p class="mb-0 text-soft small">Street food</p>
+                        </div>
+                        <button type="button" class="btn btn-inspire btn-sm ms-auto">Follow</button>
+                    </div>
+                    <div class="creator-item">
+                        <div class="icon-circle sm">SM</div>
+                        <div>
+                            <strong>@sara.meals</strong>
+                            <p class="mb-0 text-soft small">Healthy bowls</p>
+                        </div>
+                        <button type="button" class="btn btn-inspire btn-sm ms-auto">Follow</button>
+                    </div>
+                    <div class="creator-item">
+                        <div class="icon-circle sm">CP</div>
+                        <div>
+                            <strong>@ciro.pizza</strong>
+                            <p class="mb-0 text-soft small">Italian food</p>
+                        </div>
+                        <button type="button" class="btn btn-inspire btn-sm ms-auto">Follow</button>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer mt-5">
+        <div class="container py-5">
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="index.html"><img src="images/Logo-Gnam.png" alt="Logo Gnam!" width="150"></a>
+                    <p class="footer-text mt-3 mb-0">Cook. Post. Inspire.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="footer-title">Navigation</h6>
+                    <a class="d-block footer-link mb-1" href="feed.html">Feed</a>
+                    <a class="d-block footer-link mb-1" href="create-post.html">Create Post</a>
+                    <a class="d-block footer-link" href="profile.html">Profile</a>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="footer-title">Follow us</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="pills"><i class="bi bi-instagram"></i> Instagram</span>
+                        <span class="pills"><i class="bi bi-tiktok"></i> TikTok</span>
+                        <span class="pills"><i class="bi bi-youtube"></i> YouTube</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <small class="footer-text">© 2026 Gnam! — Made with passion for food creators.</small>
+        </div>
+    </footer>
+
+    <nav class="navbar-mobile">
+        <a href="index.html" aria-label="Home"><i class="bi bi-house-door"></i></a>
+        <a class="active" href="feed.html" aria-label="Feed" aria-current="page"><i class="bi bi-newspaper"></i></a>
+        <a href="create-post.html" aria-label="Create Post"><i class="bi bi-plus-square"></i></a>
+        <a href="profile.html" aria-label="Profile"><i class="bi bi-person-circle"></i></a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

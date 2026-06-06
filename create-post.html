@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gnam! - Create post</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dine_heart" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="bg-effect bg-effect-1"></div>
+    <div class="bg-effect bg-effect-2"></div>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/Logo-Gnam.png" alt="Logo Gnam!" width="200"></a>
+                <div class="nav-links d-flex ms-auto gap-2 align-items-center">
+                    <a class="nav-link" href="feed.html">Feed</a>
+                    <div class="dropdown">
+                        <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Profile
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-profile">
+                            <li><a class="dropdown-item" href="profile.html"><i
+                                        class="bi bi-person-circle me-2"></i>View Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="create-post.html" class="btn btn-post active mx-2" aria-current="page"><i
+                        class="bi bi-plus-lg me-1"></i>Create post</a>
+                <div class="d-flex align-items-center gap-2 ms-2">
+                    <button type="button" aria-label="Dark mode"
+                        class="btn btn-sm btn-effect rounded-pill d-flex align-items-center gap-2 mb-0">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container py-4 pb-5">
+        <section class="reveal reveal-delay-1 mt-4">
+            <article class="create-post-banner">
+                <img src="images/tagliatelle_ragu.jpg" alt="Tagliatelle with ragu sauce">
+                <div class="create-post-banner-content d-flex flex-column justify-content-center gap-3 p-4">
+                    <span class="create-post-badge rounded-pill">INSPIRE OTHERS</span>
+                    <h1>From kitchen idea to unforgettable post.</h1>
+                    <p>
+                        Make your recipe easy to follow, beautiful to see, and impossible to ignore.
+                        Inspire someone to cook it today.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-get-inspired create-post-btn" href="#create-post-form">Create post</a>
+                        <a class="btn btn-inspire create-post-btn" href="feed.html">Get inspired</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="row g-4 mt-2">
+            <div class="col-lg-8">
+                <form action="#" method="post" id="create-post-form" enctype="multipart/form-data"
+                    class="block-singlepost reveal reveal-delay-2 create-post-form">
+                    <h4 class="mb-1">Create your recipe post</h4>
+                    <p class="text-soft mb-3">Make it simple to follow, beautiful to view, and easy to replicate.</p>
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="postTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="postTitle" name="postTitle"
+                                placeholder="e.g. Neapolitan Pizza in 45 minutes" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="postDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="postDescription" name="postDescription" rows="4"
+                                placeholder="Tell the story behind your dish and why others should try it."
+                                required></textarea>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="prepTime" class="form-label">Preparation time</label>
+                            <input type="text" class="form-control" id="prepTime" name="prepTime"
+                                placeholder="e.g. 45 min" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="difficulty" class="form-label">Difficulty</label>
+                            <select id="difficulty" name="difficulty" class="form-select" required>
+                                <option value="" selected disabled>Select level</option>
+                                <option>Easy</option>
+                                <option>Medium</option>
+                                <option>Hard</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="servings" class="form-label">Servings</label>
+                            <input type="number" class="form-control" id="servings" name="servings" min="1" max="20"
+                                placeholder="4" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="ingredients" class="form-label">Ingredients</label>
+                            <textarea class="form-control" id="ingredients" name="ingredients" rows="5"
+                                placeholder="- 350g flour&#10;- 250ml warm water&#10;- 300g cherry tomatoes"
+                                required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="steps" class="form-label">Steps</label>
+                            <textarea class="form-control" id="steps" name="steps" rows="5"
+                                placeholder="1. Mix ingredients...&#10;2. Let it rise...&#10;3. Bake at 250°C..."
+                                required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label mt-2 mb-0">Nutrition facts <span class="text-soft">(per
+                                    serving)</span></label>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent text-soft">Cal</span>
+                                <input type="number" class="form-control" id="inputCalories" name="calories"
+                                    placeholder="0" min="0">
+                                <span class="input-group-text bg-transparent text-soft">kcal</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent text-soft">Pro</span>
+                                <input type="number" class="form-control" id="inputProtein" name="protein"
+                                    placeholder="0" min="0">
+                                <span class="input-group-text bg-transparent text-soft">g</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent text-soft">Carb</span>
+                                <input type="number" class="form-control" id="inputCarbs" name="carbs" placeholder="0"
+                                    min="0">
+                                <span class="input-group-text bg-transparent text-soft">g</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent text-soft">Fat</span>
+                                <input type="number" class="form-control" id="inputFat" name="fat" placeholder="0"
+                                    min="0">
+                                <span class="input-group-text bg-transparent text-soft">g</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <label for="hashtags" class="form-label">Hashtags</label>
+                            <input type="text" class="form-control" id="hashtags" name="hashtags"
+                                placeholder="#deliciousfood #homemaderecipe #cookandinspire">
+                        </div>
+                    </div>
+
+                    <div class="upload-image mt-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-images"></i>
+                            <strong>Image</strong>
+                        </div>
+                        <p class="text-soft mb-3">Upload a photo (JPG or PNG, max 5MB).</p>
+                        <input class="form-control" type="file" id="coverImage" name="coverImage"
+                            accept=".jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2 justify-content-end mt-4">
+                        <button type="reset" class="btn btn-inspire"><i class="bi bi-eraser me-1"></i>Clear</button>
+                        <button type="submit" class="btn btn-get-inspired"><i class="bi bi-send-check me-1"></i>Publish
+                            and inspire</button>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="col-lg-4 sidebar-sticky align-self-start">
+                <section class="block-singlepost reveal reveal-delay-3 mb-4">
+                    <h5 class="mb-3"><i class="bi bi-phone me-2"></i>Live preview</h5>
+                    <article class="preview-block">
+                        <img src="images/pizza.jpg" alt="Recipe preview cover">
+                        <div class="p-3">
+                            <strong class="d-block mb-1">Neapolitan pizza</strong>
+                            <p class="text-soft small mb-2">Simple method, amazing result, and crispy crust.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-2">
+                                <span class="pills">#homemade</span>
+                                <span class="pills">#deliciousfood</span>
+                            </div>
+                            <div class="post-actions">
+                                <button type="button"><i
+                                        class="material-symbols-outlined text-danger material-symbols-outlined-size">dine_heart</i>
+                                    Like</button>
+                                <button type="button"><i class="bi bi-chat-dots"></i> Comment</button>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer mt-5">
+        <div class="container py-5">
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="index.html"><img src="images/Logo-Gnam.png" alt="Logo Gnam!" width="150"></a>
+                    <p class="footer-text mt-3 mb-0">Cook. Post. Inspire.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="footer-title">Navigation</h6>
+                    <a class="d-block footer-link mb-1" href="feed.html">Feed</a>
+                    <a class="d-block footer-link mb-1" href="create-post.html">Create Post</a>
+                    <a class="d-block footer-link" href="profile.html">Profile</a>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="footer-title">Follow us</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="pills"><i class="bi bi-instagram"></i> Instagram</span>
+                        <span class="pills"><i class="bi bi-tiktok"></i> TikTok</span>
+                        <span class="pills"><i class="bi bi-youtube"></i> YouTube</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <small class="footer-text">© 2026 Gnam! — Made with passion for food creators.</small>
+        </div>
+    </footer>
+
+    <nav class="navbar-mobile">
+        <a href="index.html" aria-label="Home"><i class="bi bi-house-door"></i></a>
+        <a href="feed.html" aria-label="Feed"><i class="bi bi-newspaper"></i></a>
+        <a class="active" href="create-post.html" aria-label="Create Post" aria-current="page"><i
+                class="bi bi-plus-square"></i></a>
+        <a href="profile.html" aria-label="Profile"><i class="bi bi-person-circle"></i></a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
