@@ -28,6 +28,12 @@ Compared to the lab-session version, the following changes were introduced:
 
 **Background Lighting Effects**: I have used a combination of fixed and floating divs (.bg-effect) with heavy blur filters to produce background lights that provide a nice ambiance.
 
+## Deployment URL
+
+```text
+https://oigrol.github.io/Gnam---Social-Food-Project/
+```
+
 ## Hand-Drawn Sketch
 
 Include below **one image of a hand-drawn sketch**, produced before starting the implementation, showing the layout or interface idea you planned to develop.
